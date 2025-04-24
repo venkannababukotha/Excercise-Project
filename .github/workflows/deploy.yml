@@ -16,7 +16,7 @@ jobs:
             - name: Get the code
               uses: actions/checkout@v4
             - name: Install dependencies
-              uses: npm ci
+              run: npm ci
             - name: Test the code
               run: npm run test
     deploy:
@@ -25,8 +25,8 @@ jobs:
             - name: Get code
               uses: actions/checkout@v4
             - name: Install dependencies
-              uses: npm ci
+              run: npm ci
             - name: Build code
-              uses: npm run build
+              run: npm run build
             - name: Deploy code
-              uses: echo "Deploying....."
+              run: echo "Deploying....."
